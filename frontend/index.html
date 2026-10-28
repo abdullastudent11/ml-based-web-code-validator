@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0c0717">
+    <meta name="description" content="A local HTML, CSS, and JavaScript validation studio with syntax parsing, semantic checks, and ML-ranked error predictions.">
+    <title>WebCode Studio — Intelligent Validation</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <div class="ambient-background" aria-hidden="true"></div>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Main navigation">
+        <a class="brand" href="/" aria-label="WebCode Studio home">
+          <span class="brand-mark" aria-hidden="true"><span>&lt;</span><i></i><span>/&gt;</span></span>
+          <span class="brand-copy"><strong>webcode<span>.</span></strong><small>INTELLIGENT VALIDATION</small></span>
+        </a>
+
+        <div class="side-caption">WORKSPACE</div>
+        <nav class="side-nav">
+          <button class="nav-item is-active" id="nav-workbench" type="button" data-view="workbench" aria-current="page">
+            <span class="nav-icon" aria-hidden="true">⌘</span><span>Code workbench</span><span class="nav-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="nav-item" id="nav-model" type="button" data-view="model">
+            <span class="nav-icon chart-icon" aria-hidden="true">▥</span><span>Model lab</span>
+          </button>
+        </nav>
+
+        <div class="side-caption pipeline-caption">ANALYSIS ENGINE</div>
+        <ol class="pipeline-list">
+          <li><span class="pipeline-number">01</span><span><strong>Parse source</strong><small>HTML · CSS · JavaScript</small></span></li>
+          <li><span class="pipeline-number">02</span><span><strong>Check semantics</strong><small>Rules across your files</small></span></li>
+          <li><span class="pipeline-number">03</span><span><strong>Rank error types</strong><small>Parser-assisted ML model</small></span></li>
+        </ol>
+
+        <div class="sidebar-spacer"></div>
+        <div class="privacy-card">
+          <span class="privacy-icon" aria-hidden="true">⌁</span>
+          <div><strong>Runs on your machine</strong><p>Code is inspected locally and never executed.</p></div>
+        </div>
+        <div class="sidebar-version"><span class="version-pulse"></span> BTECH PROJECT · LOCAL BUILD</div>
+      </aside>
+
+      <div class="main-column">
+        <header class="topbar">
+          <div class="breadcrumbs"><span>WebCode Studio</span><span class="crumb-separator">/</span><strong id="page-crumb">Code workbench</strong></div>
+          <div class="topbar-right">
+            <span class="keyboard-hint"><kbd>Ctrl</kbd><span>+</span><kbd>Enter</kbd><span>to analyze</span></span>
+            <div class="service-indicator"><span class="service-pulse"></span><span id="service-label">Connecting to local service</span></div>
+          </div>
+        </header>
+
+        <main class="main-content">
+          <section class="view-panel" id="workbench-view" aria-labelledby="workbench-title">
+            <section class="page-heading hero-surface">
+              <div class="hero-copy">
+                <p class="eyebrow"><span class="eyebrow-line"></span> INTELLIGENT WEB CODE VALIDATION</p>
+                <h1 id="workbench-title">A clearer view of<br><span>what your code means.</span></h1>
+                <p class="page-description">Parse, validate, and predict issues across your HTML, CSS, and JavaScript in one pass.</p>
+              </div>
+              <div class="hero-visual" aria-hidden="true">
+                <div class="hero-ring ring-one"></div><div class="hero-ring ring-two"></div>
+                <div class="hero-code-card"><span class="code-card-dots"><i></i><i></i><i></i></span><span class="code-line line-a"></span><span class="code-line line-b"></span><span class="code-line line-c"></span><span class="code-line line-d"></span><span class="code-glow">&lt;/&gt;</span></div>
+                <span class="orbit-dot dot-one"></span><span class="orbit-dot dot-two"></span><span class="orbit-dot dot-three"></span>
+              </div>
+              <div class="hero-foot">
+                <div class="hero-capability"><span class="capability-mark">01</span><span><strong>3 source languages</strong><small>One connected analysis</small></span></div>
+                <div class="hero-capability"><span class="capability-mark">02</span><span><strong>Static + machine learning</strong><small>Findings with context</small></span></div>
+                <div class="hero-capability"><span class="capability-mark live-mark">●</span><span><strong>Private by design</strong><small>Local code inspection</small></span></div>
+              </div>
+            </section>
+
+            <section class="workspace" id="workspace" aria-label="Code analysis workspace">
+              <section class="editor-card panel-card" aria-labelledby="editor-heading">
+                <div class="card-heading">
+                  <div class="heading-copy"><p class="section-label"><span class="section-dot"></span> SOURCE EDITOR</p><h2 id="editor-heading">Project files</h2></div>
+                  <span class="editor-state"><span class="state-dot"></span> Ready</span>
+                </div>
+                <div class="editor-toolbar">
+                  <div class="language-tabs" role="tablist" aria-label="Source language">
+                    <button class="language-tab is-active" id="tab-html" type="button" role="tab" aria-selected="true" aria-controls="source-editor" data-language="html"><span class="file-dot html-dot"></span>index.html</button>
+                    <button class="language-tab" id="tab-css" type="button" role="tab" aria-selected="false" aria-controls="source-editor" data-language="css" tabindex="-1"><span class="file-dot css-dot"></span>styles.css</button>
+                    <button class="language-tab" id="tab-javascript" type="button" role="tab" aria-selected="false" aria-controls="source-editor" data-language="javascript" tabindex="-1"><span class="file-dot js-dot"></span>script.js</button>
+                  </div>
+                  <span class="editor-language-badge" id="editor-language">HTML</span>
+                </div>
+                <div class="example-toolbar" aria-label="Load code example">
+                  <span class="example-label">TRY A SAMPLE</span>
+                  <button class="sample-button" id="valid-example" type="button"><span class="sample-dot clean-dot"></span>Clean</button>
+                  <button class="sample-button" id="error-example" type="button"><span class="sample-dot semantic-dot"></span>Semantic</button>
+                  <button class="sample-button" id="syntax-example" type="button"><span class="sample-dot syntax-dot"></span>Syntax</button>
+                  <button class="clear-button" id="clear-editor" type="button" aria-label="Clear all source code" title="Clear all source code">Clear</button>
+                </div>
+                <div class="code-editor" id="source-editor" role="tabpanel" aria-labelledby="tab-html">
+                  <div class="line-numbers" id="line-numbers" aria-hidden="true">1</div>
+                  <textarea id="code-input" aria-label="HTML source code" autocomplete="off" autocapitalize="off" spellcheck="false" wrap="off" placeholder="Paste or type source code…"></textarea>
+                </div>
+                <div class="editor-footer"><span class="editor-footer-left"><span class="footer-lock" aria-hidden="true">⌑</span> Local source</span><span id="editor-count">0 lines · 0 characters</span></div>
+                <div class="run-row">
+                  <label class="ranking-control" for="top-k-select"><span>ML rankings</span><select id="top-k-select" aria-label="Number of ML error categories to rank"><option value="1">Top 1</option><option value="2">Top 2</option><option value="3" selected>Top 3</option><option value="4">Top 4</option><option value="5">Top 5</option></select></label>
+                  <button class="run-button" id="analyze-button" type="button"><span class="run-button-icon" aria-hidden="true">✳</span><span id="analyze-label">Run analysis</span><span class="button-arrow" aria-hidden="true">→</span></button>
+                </div>
+              </section>
+
+              <section class="results-card panel-card" aria-labelledby="results-heading">
+                <div class="card-heading results-heading">
+                  <div class="heading-copy"><p class="section-label"><span class="section-dot result-dot"></span> VALIDATION REPORT</p><h2 id="results-heading">Analysis results</h2></div>
+                  <button class="export-button" id="export-report" type="button" disabled><span aria-hidden="true">↓</span> Export</button>
+                </div>
+                <div class="result-toolbar"><span id="result-summary" class="result-summary">Waiting for analysis</span><span class="result-coverage"><span class="coverage-dot"></span>HTML <span class="coverage-dot css-coverage"></span>CSS <span class="coverage-dot js-coverage"></span>JS</span></div>
+                <div id="results-content" class="results-content" aria-live="polite" aria-atomic="false">
+                  <div class="empty-state"><div class="empty-art" aria-hidden="true"><span>&lt;</span><i></i><span>/&gt;</span></div><h3>Your report will appear here</h3><p>Run analysis to see parser findings, semantic checks, and ML category rankings.</p><div class="empty-tags"><span>Parser</span><span>Semantics</span><span>ML ranking</span></div></div>
+                </div>
+                <div class="results-footnote"><span aria-hidden="true">i</span> ML scores rank likely categories; they are not calibrated probabilities.</div>
+              </section>
+            </section>
+            <footer class="page-footer"><span>WebCode Studio <span class="footer-separator">/</span> HTML · CSS · JavaScript</span><button class="footer-link" type="button" data-view="model">Explore model performance <span aria-hidden="true">↗</span></button></footer>
+          </section>
+
+          <section class="view-panel model-view" id="model-view" aria-labelledby="model-title" hidden>
+            <section class="page-heading model-hero">
+              <div><p class="eyebrow"><span class="eyebrow-line"></span> MODEL TRANSPARENCY</p><h1 id="model-title">Inside the <span>prediction engine.</span></h1><p class="page-description">Evaluation results, language-level performance, and category detail from the saved held-out benchmark.</p></div>
+              <div class="model-engine-badge"><span class="engine-orbit">✳</span><span><small>SELECTED CLASSIFIER</small><strong id="model-algorithm">Loading model…</strong><em id="model-feature-mode">token_parser</em></span></div>
+            </section>
+
+            <section class="metric-grid" aria-label="Overall model metrics">
+              <article class="metric-card metric-primary"><span class="metric-label">TEST ACCURACY</span><strong id="model-accuracy">—</strong><small>Correct labels on the held-out split</small><span class="metric-corner" aria-hidden="true">↗</span></article>
+              <article class="metric-card"><span class="metric-label">MACRO F1</span><strong id="model-macro-f1">—</strong><small>Average across error categories</small></article>
+              <article class="metric-card"><span class="metric-label">MACRO PRECISION</span><strong id="model-precision">—</strong><small>Prediction quality across categories</small></article>
+              <article class="metric-card"><span class="metric-label">MACRO RECALL</span><strong id="model-recall">—</strong><small>Coverage across true categories</small></article>
+            </section>
+
+            <section class="model-grid">
+              <article class="panel-card comparison-card">
+                <div class="card-heading"><div class="heading-copy"><p class="section-label"><span class="section-dot"></span> FEATURE VALUE</p><h2>Parser signals improve ranking</h2></div><span class="compare-tag">SAME TEST SPLIT</span></div>
+                <p class="card-description">Selected parser-assisted model compared with the token-only reference baseline.</p>
+                <div id="baseline-comparison" class="comparison-bars"><p class="loading-note">Loading benchmark…</p></div>
+                <div class="comparison-foot"><span>TRAINING SET</span><strong id="model-test-size">—</strong><span class="alpha-label">SMOOTHING α</span><strong id="model-alpha">—</strong></div>
+              </article>
+              <article class="panel-card split-card">
+                <div class="card-heading"><div class="heading-copy"><p class="section-label"><span class="section-dot"></span> EXPERIMENT DESIGN</p><h2>Data split</h2></div></div>
+                <p class="card-description">The model is selected on validation data and measured on a separate test split.</p>
+                <div class="split-bar" id="split-bar" aria-label="Dataset split proportions"></div>
+                <div class="split-legend" id="split-counts"><span class="loading-note">Loading split counts…</span></div>
+                <p class="selection-note" id="validation-selection">Validation selection: loading…</p>
+              </article>
+            </section>
+
+            <section class="panel-card language-panel">
+              <div class="card-heading"><div class="heading-copy"><p class="section-label"><span class="section-dot"></span> LANGUAGE BREAKDOWN</p><h2>Performance by source language</h2></div><span class="subtle-count">HTML · CSS · JAVASCRIPT</span></div>
+              <div id="model-languages" class="language-metrics-grid"><p class="loading-note">Loading language metrics…</p></div>
+            </section>
+
+            <section class="panel-card category-panel">
+              <div class="card-heading"><div class="heading-copy"><p class="section-label"><span class="section-dot"></span> CLASS DETAIL</p><h2>Category-level F1</h2></div><span class="subtle-count">HELD-OUT EXAMPLES</span></div>
+              <p class="card-description">F1 balances precision and recall for each predicted category. Support shows how many test examples belong to that category.</p>
+              <div id="category-results" class="category-results"><p class="loading-note">Loading category results…</p></div>
+            </section>
+
+            <aside class="benchmark-note" id="model-data-warning"><span class="note-icon" aria-hidden="true">i</span><div><strong>Read the benchmark with context</strong><p>Metrics below come from synthetic examples and are not an estimate of performance on real-world code. Naive Bayes ranking scores are not calibrated probabilities.</p></div></aside>
+            <footer class="page-footer"><span>Model evaluation <span class="footer-separator">/</span> Honest metrics for a student project</span><button class="footer-link" type="button" data-view="workbench">Return to workbench <span aria-hidden="true">↗</span></button></footer>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

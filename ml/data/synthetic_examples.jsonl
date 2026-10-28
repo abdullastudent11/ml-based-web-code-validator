@@ -1,0 +1,72 @@
+{"language":"html","source":"<div class=\"card\">Welcome","label":"html_unclosed_tag","split":"train","origin":"hand_authored_synthetic"}
+{"language":"html","source":"<main><h1>Title</h1><section>Details","label":"html_unclosed_tag","split":"train","origin":"hand_authored_synthetic"}
+{"language":"html","source":"<article><p>News item","label":"html_unclosed_tag","split":"train","origin":"hand_authored_synthetic"}
+{"language":"html","source":"<ul><li>First<li>Second","label":"html_unclosed_tag","split":"train","origin":"hand_authored_synthetic"}
+{"language":"html","source":"<form><label>Email</label><input type=\"email\">","label":"html_unclosed_tag","split":"train","origin":"hand_authored_synthetic"}
+{"language":"html","source":"<aside class=\"note\">Read this","label":"html_unclosed_tag","split":"test","origin":"hand_authored_synthetic"}
+{"language":"html","source":"<figure><img src=\"cover.jpg\"><figcaption>Cover","label":"html_unclosed_tag","split":"test","origin":"hand_authored_synthetic"}
+{"language":"html","source":"<details><summary>More</summary><p>Information","label":"html_unclosed_tag","split":"test","origin":"hand_authored_synthetic"}
+{"language":"html","source":"<div>one</span>","label":"html_unexpected_end_tag","split":"train","origin":"hand_authored_synthetic"}
+{"language":"html","source":"<main><p>intro</main></section>","label":"html_unexpected_end_tag","split":"train","origin":"hand_authored_synthetic"}
+{"language":"html","source":"</nav><header>Menu</header>","label":"html_unexpected_end_tag","split":"train","origin":"hand_authored_synthetic"}
+{"language":"html","source":"<ul><li>A</ul></li>","label":"html_unexpected_end_tag","split":"train","origin":"hand_authored_synthetic"}
+{"language":"html","source":"</footer><main>content</main>","label":"html_unexpected_end_tag","split":"train","origin":"hand_authored_synthetic"}
+{"language":"html","source":"<article>Story</main>","label":"html_unexpected_end_tag","split":"test","origin":"hand_authored_synthetic"}
+{"language":"html","source":"<table><tr><td>Cell</th></tr></table>","label":"html_unexpected_end_tag","split":"test","origin":"hand_authored_synthetic"}
+{"language":"html","source":"</aside><p>Summary</p>","label":"html_unexpected_end_tag","split":"test","origin":"hand_authored_synthetic"}
+{"language":"html","source":"<main><h1>Home</h1><p>Welcome</p></main>","label":"no_likely_error","split":"train","origin":"hand_authored_synthetic"}
+{"language":"html","source":"<button type=\"button\">Save</button>","label":"no_likely_error","split":"train","origin":"hand_authored_synthetic"}
+{"language":"html","source":"<ul><li>One</li><li>Two</li></ul>","label":"no_likely_error","split":"train","origin":"hand_authored_synthetic"}
+{"language":"html","source":"<label for=\"email\">Email</label><input id=\"email\" type=\"email\">","label":"no_likely_error","split":"train","origin":"hand_authored_synthetic"}
+{"language":"html","source":"<section><h2>About</h2><p>Details</p></section>","label":"no_likely_error","split":"train","origin":"hand_authored_synthetic"}
+{"language":"html","source":"<header><nav><a href=\"/home\">Home</a></nav></header>","label":"no_likely_error","split":"test","origin":"hand_authored_synthetic"}
+{"language":"html","source":"<article><h2>News</h2><p>Latest update</p></article>","label":"no_likely_error","split":"test","origin":"hand_authored_synthetic"}
+{"language":"html","source":"<footer><small>Copyright</small></footer>","label":"no_likely_error","split":"test","origin":"hand_authored_synthetic"}
+{"language":"css","source":".card { color: red;","label":"css_unclosed_block","split":"train","origin":"hand_authored_synthetic"}
+{"language":"css","source":"@media (max-width: 600px) { .card { display: block; }","label":"css_unclosed_block","split":"train","origin":"hand_authored_synthetic"}
+{"language":"css","source":"body { margin: 0; padding: 1rem;","label":"css_unclosed_block","split":"train","origin":"hand_authored_synthetic"}
+{"language":"css","source":"nav > a { color: navy;","label":"css_unclosed_block","split":"train","origin":"hand_authored_synthetic"}
+{"language":"css","source":".menu:hover { opacity: .8;","label":"css_unclosed_block","split":"train","origin":"hand_authored_synthetic"}
+{"language":"css","source":"#app { min-height: 100vh;","label":"css_unclosed_block","split":"test","origin":"hand_authored_synthetic"}
+{"language":"css","source":".panel { border: 1px solid gray; padding: 12px;","label":"css_unclosed_block","split":"test","origin":"hand_authored_synthetic"}
+{"language":"css","source":"@media screen and (min-width: 700px) { .aside { display: block; }","label":"css_unclosed_block","split":"test","origin":"hand_authored_synthetic"}
+{"language":"css","source":".card { color red; }","label":"css_missing_colon","split":"train","origin":"hand_authored_synthetic"}
+{"language":"css","source":"body { margin 0; }","label":"css_missing_colon","split":"train","origin":"hand_authored_synthetic"}
+{"language":"css","source":"h1 { font-size 2rem; }","label":"css_missing_colon","split":"train","origin":"hand_authored_synthetic"}
+{"language":"css","source":"button { background blue; }","label":"css_missing_colon","split":"train","origin":"hand_authored_synthetic"}
+{"language":"css","source":".grid { display grid; }","label":"css_missing_colon","split":"train","origin":"hand_authored_synthetic"}
+{"language":"css","source":".notice { border-color silver; }","label":"css_missing_colon","split":"test","origin":"hand_authored_synthetic"}
+{"language":"css","source":":root { --space 1rem; }","label":"css_missing_colon","split":"test","origin":"hand_authored_synthetic"}
+{"language":"css","source":"img { object-fit cover; }","label":"css_missing_colon","split":"test","origin":"hand_authored_synthetic"}
+{"language":"css","source":".card { color: red; padding: 1rem; }","label":"no_likely_error","split":"train","origin":"hand_authored_synthetic"}
+{"language":"css","source":"body { margin: 0; background-color: white; }","label":"no_likely_error","split":"train","origin":"hand_authored_synthetic"}
+{"language":"css","source":"h1 { font-size: 2rem; line-height: 1.2; }","label":"no_likely_error","split":"train","origin":"hand_authored_synthetic"}
+{"language":"css","source":"button:hover { opacity: 0.8; cursor: pointer; }","label":"no_likely_error","split":"train","origin":"hand_authored_synthetic"}
+{"language":"css","source":".layout { display: grid; gap: 1rem; }","label":"no_likely_error","split":"train","origin":"hand_authored_synthetic"}
+{"language":"css","source":"@media (min-width: 700px) { .menu { display: flex; } }","label":"no_likely_error","split":"test","origin":"hand_authored_synthetic"}
+{"language":"css","source":":root { --space: 1rem; }","label":"no_likely_error","split":"test","origin":"hand_authored_synthetic"}
+{"language":"css","source":".notice { border: 1px solid gray; padding: 12px; }","label":"no_likely_error","split":"test","origin":"hand_authored_synthetic"}
+{"language":"javascript","source":"function add(a, b { return a + b; }","label":"javascript_unclosed_delimiter","split":"train","origin":"hand_authored_synthetic"}
+{"language":"javascript","source":"const items = [1, 2, 3;","label":"javascript_unclosed_delimiter","split":"train","origin":"hand_authored_synthetic"}
+{"language":"javascript","source":"if (ready { start(); }","label":"javascript_unclosed_delimiter","split":"train","origin":"hand_authored_synthetic"}
+{"language":"javascript","source":"const user = { name: \"Ada\";","label":"javascript_unclosed_delimiter","split":"train","origin":"hand_authored_synthetic"}
+{"language":"javascript","source":"while (count < 3 { count++; }","label":"javascript_unclosed_delimiter","split":"train","origin":"hand_authored_synthetic"}
+{"language":"javascript","source":"const result = compute(4, 2;","label":"javascript_unclosed_delimiter","split":"test","origin":"hand_authored_synthetic"}
+{"language":"javascript","source":"const list = [1, 2, 3;","label":"javascript_unclosed_delimiter","split":"test","origin":"hand_authored_synthetic"}
+{"language":"javascript","source":"if (isActive { start(); }","label":"javascript_unclosed_delimiter","split":"test","origin":"hand_authored_synthetic"}
+{"language":"javascript","source":"const title = \"Hello;","label":"javascript_unterminated_string","split":"train","origin":"hand_authored_synthetic"}
+{"language":"javascript","source":"let label = 'Save;","label":"javascript_unterminated_string","split":"train","origin":"hand_authored_synthetic"}
+{"language":"javascript","source":"console.log(\"done);","label":"javascript_unterminated_string","split":"train","origin":"hand_authored_synthetic"}
+{"language":"javascript","source":"const template = `Backtick;","label":"javascript_unterminated_string","split":"train","origin":"hand_authored_synthetic"}
+{"language":"javascript","source":"throw new Error('failed);","label":"javascript_unterminated_string","split":"train","origin":"hand_authored_synthetic"}
+{"language":"javascript","source":"const path = 'home;","label":"javascript_unterminated_string","split":"test","origin":"hand_authored_synthetic"}
+{"language":"javascript","source":"alert(\"welcome);","label":"javascript_unterminated_string","split":"test","origin":"hand_authored_synthetic"}
+{"language":"javascript","source":"const message = `hello ${name};","label":"javascript_unterminated_string","split":"test","origin":"hand_authored_synthetic"}
+{"language":"javascript","source":"const answer = 42;","label":"no_likely_error","split":"train","origin":"hand_authored_synthetic"}
+{"language":"javascript","source":"function greet(name) { return \"Hi \" + name; }","label":"no_likely_error","split":"train","origin":"hand_authored_synthetic"}
+{"language":"javascript","source":"if (ready) { start(); }","label":"no_likely_error","split":"train","origin":"hand_authored_synthetic"}
+{"language":"javascript","source":"const colors = [\"red\", \"blue\"];","label":"no_likely_error","split":"train","origin":"hand_authored_synthetic"}
+{"language":"javascript","source":"for (let i = 0; i < 3; i++) { print(i); }","label":"no_likely_error","split":"train","origin":"hand_authored_synthetic"}
+{"language":"javascript","source":"const button = document.querySelector(\"#save\");","label":"no_likely_error","split":"test","origin":"hand_authored_synthetic"}
+{"language":"javascript","source":"const total = sum(3, 4);","label":"no_likely_error","split":"test","origin":"hand_authored_synthetic"}
+{"language":"javascript","source":"class User { constructor(name) { this.name = name; } }","label":"no_likely_error","split":"test","origin":"hand_authored_synthetic"}

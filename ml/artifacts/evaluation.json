@@ -1,0 +1,1196 @@
+{
+  "evaluation_data": {
+    "origin": [
+      "grammar_generated_synthetic",
+      "hand_authored_synthetic"
+    ],
+    "synthetic_only": true,
+    "split_counts": {
+      "test": 459,
+      "train": 1773,
+      "validation": 432
+    },
+    "sha256": "e4b2be5f0bab21383883c941ba3a4fe84f2fe4b97ce3517a32f41603ccd190dc",
+    "template_group_splits_disjoint": true,
+    "holdout_note": "Generated template families are kept entirely within one split. The additional hand-authored test records are kept out of training."
+  },
+  "model_selection": {
+    "selected": {
+      "feature_mode": "token_parser",
+      "alpha": 0.25,
+      "validation_examples": 432,
+      "validation_accuracy": 1.0,
+      "validation_macro_f1": 1.0
+    },
+    "candidates": [
+      {
+        "feature_mode": "token_parser",
+        "alpha": 0.25,
+        "validation_examples": 432,
+        "validation_accuracy": 1.0,
+        "validation_macro_f1": 1.0
+      },
+      {
+        "feature_mode": "token_parser",
+        "alpha": 0.5,
+        "validation_examples": 432,
+        "validation_accuracy": 1.0,
+        "validation_macro_f1": 1.0
+      },
+      {
+        "feature_mode": "token_parser",
+        "alpha": 1.0,
+        "validation_examples": 432,
+        "validation_accuracy": 1.0,
+        "validation_macro_f1": 1.0
+      },
+      {
+        "feature_mode": "token_parser",
+        "alpha": 2.0,
+        "validation_examples": 432,
+        "validation_accuracy": 1.0,
+        "validation_macro_f1": 1.0
+      },
+      {
+        "feature_mode": "token_char_parser",
+        "alpha": 2.0,
+        "validation_examples": 432,
+        "validation_accuracy": 0.912,
+        "validation_macro_f1": 0.9133
+      },
+      {
+        "feature_mode": "token_char_parser",
+        "alpha": 1.0,
+        "validation_examples": 432,
+        "validation_accuracy": 0.8889,
+        "validation_macro_f1": 0.8861
+      },
+      {
+        "feature_mode": "token_char_parser",
+        "alpha": 0.5,
+        "validation_examples": 432,
+        "validation_accuracy": 0.8843,
+        "validation_macro_f1": 0.8815
+      },
+      {
+        "feature_mode": "token_char_parser",
+        "alpha": 0.25,
+        "validation_examples": 432,
+        "validation_accuracy": 0.8519,
+        "validation_macro_f1": 0.8501
+      }
+    ]
+  },
+  "selected_model": {
+    "algorithm": "multinomial-naive-bayes",
+    "feature_mode": "token_parser",
+    "alpha": 0.25,
+    "training_examples_including_validation": 2205
+  },
+  "overall": {
+    "examples": 459,
+    "accuracy": 0.9325,
+    "macro_precision": 0.9548,
+    "macro_recall": 0.9338,
+    "macro_f1": 0.9353,
+    "per_class": {
+      "css:css_missing_colon": {
+        "support": 39,
+        "precision": 1.0,
+        "recall": 0.9231,
+        "f1": 0.96
+      },
+      "css:css_unclosed_block": {
+        "support": 39,
+        "precision": 0.8667,
+        "recall": 1.0,
+        "f1": 0.9286
+      },
+      "css:css_unterminated_string": {
+        "support": 36,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "css:no_likely_error": {
+        "support": 39,
+        "precision": 0.9722,
+        "recall": 0.8974,
+        "f1": 0.9333
+      },
+      "html:html_duplicate_attribute": {
+        "support": 36,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "html:html_unclosed_tag": {
+        "support": 39,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "html:html_unexpected_end_tag": {
+        "support": 39,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "html:no_likely_error": {
+        "support": 39,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "javascript:javascript_unclosed_delimiter": {
+        "support": 39,
+        "precision": 1.0,
+        "recall": 0.6923,
+        "f1": 0.8182
+      },
+      "javascript:javascript_unexpected_token": {
+        "support": 36,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "javascript:javascript_unterminated_string": {
+        "support": 39,
+        "precision": 1.0,
+        "recall": 0.6923,
+        "f1": 0.8182
+      },
+      "javascript:no_likely_error": {
+        "support": 39,
+        "precision": 0.619,
+        "recall": 1.0,
+        "f1": 0.7647
+      }
+    },
+    "confusion_matrix": {
+      "css:css_missing_colon": {
+        "css:css_missing_colon": 36,
+        "css:css_unclosed_block": 2,
+        "css:css_unterminated_string": 0,
+        "css:no_likely_error": 1,
+        "html:html_duplicate_attribute": 0,
+        "html:html_unclosed_tag": 0,
+        "html:html_unexpected_end_tag": 0,
+        "html:no_likely_error": 0,
+        "javascript:javascript_unclosed_delimiter": 0,
+        "javascript:javascript_unexpected_token": 0,
+        "javascript:javascript_unterminated_string": 0,
+        "javascript:no_likely_error": 0
+      },
+      "css:css_unclosed_block": {
+        "css:css_missing_colon": 0,
+        "css:css_unclosed_block": 39,
+        "css:css_unterminated_string": 0,
+        "css:no_likely_error": 0,
+        "html:html_duplicate_attribute": 0,
+        "html:html_unclosed_tag": 0,
+        "html:html_unexpected_end_tag": 0,
+        "html:no_likely_error": 0,
+        "javascript:javascript_unclosed_delimiter": 0,
+        "javascript:javascript_unexpected_token": 0,
+        "javascript:javascript_unterminated_string": 0,
+        "javascript:no_likely_error": 0
+      },
+      "css:css_unterminated_string": {
+        "css:css_missing_colon": 0,
+        "css:css_unclosed_block": 0,
+        "css:css_unterminated_string": 36,
+        "css:no_likely_error": 0,
+        "html:html_duplicate_attribute": 0,
+        "html:html_unclosed_tag": 0,
+        "html:html_unexpected_end_tag": 0,
+        "html:no_likely_error": 0,
+        "javascript:javascript_unclosed_delimiter": 0,
+        "javascript:javascript_unexpected_token": 0,
+        "javascript:javascript_unterminated_string": 0,
+        "javascript:no_likely_error": 0
+      },
+      "css:no_likely_error": {
+        "css:css_missing_colon": 0,
+        "css:css_unclosed_block": 4,
+        "css:css_unterminated_string": 0,
+        "css:no_likely_error": 35,
+        "html:html_duplicate_attribute": 0,
+        "html:html_unclosed_tag": 0,
+        "html:html_unexpected_end_tag": 0,
+        "html:no_likely_error": 0,
+        "javascript:javascript_unclosed_delimiter": 0,
+        "javascript:javascript_unexpected_token": 0,
+        "javascript:javascript_unterminated_string": 0,
+        "javascript:no_likely_error": 0
+      },
+      "html:html_duplicate_attribute": {
+        "css:css_missing_colon": 0,
+        "css:css_unclosed_block": 0,
+        "css:css_unterminated_string": 0,
+        "css:no_likely_error": 0,
+        "html:html_duplicate_attribute": 36,
+        "html:html_unclosed_tag": 0,
+        "html:html_unexpected_end_tag": 0,
+        "html:no_likely_error": 0,
+        "javascript:javascript_unclosed_delimiter": 0,
+        "javascript:javascript_unexpected_token": 0,
+        "javascript:javascript_unterminated_string": 0,
+        "javascript:no_likely_error": 0
+      },
+      "html:html_unclosed_tag": {
+        "css:css_missing_colon": 0,
+        "css:css_unclosed_block": 0,
+        "css:css_unterminated_string": 0,
+        "css:no_likely_error": 0,
+        "html:html_duplicate_attribute": 0,
+        "html:html_unclosed_tag": 39,
+        "html:html_unexpected_end_tag": 0,
+        "html:no_likely_error": 0,
+        "javascript:javascript_unclosed_delimiter": 0,
+        "javascript:javascript_unexpected_token": 0,
+        "javascript:javascript_unterminated_string": 0,
+        "javascript:no_likely_error": 0
+      },
+      "html:html_unexpected_end_tag": {
+        "css:css_missing_colon": 0,
+        "css:css_unclosed_block": 0,
+        "css:css_unterminated_string": 0,
+        "css:no_likely_error": 0,
+        "html:html_duplicate_attribute": 0,
+        "html:html_unclosed_tag": 0,
+        "html:html_unexpected_end_tag": 39,
+        "html:no_likely_error": 0,
+        "javascript:javascript_unclosed_delimiter": 0,
+        "javascript:javascript_unexpected_token": 0,
+        "javascript:javascript_unterminated_string": 0,
+        "javascript:no_likely_error": 0
+      },
+      "html:no_likely_error": {
+        "css:css_missing_colon": 0,
+        "css:css_unclosed_block": 0,
+        "css:css_unterminated_string": 0,
+        "css:no_likely_error": 0,
+        "html:html_duplicate_attribute": 0,
+        "html:html_unclosed_tag": 0,
+        "html:html_unexpected_end_tag": 0,
+        "html:no_likely_error": 39,
+        "javascript:javascript_unclosed_delimiter": 0,
+        "javascript:javascript_unexpected_token": 0,
+        "javascript:javascript_unterminated_string": 0,
+        "javascript:no_likely_error": 0
+      },
+      "javascript:javascript_unclosed_delimiter": {
+        "css:css_missing_colon": 0,
+        "css:css_unclosed_block": 0,
+        "css:css_unterminated_string": 0,
+        "css:no_likely_error": 0,
+        "html:html_duplicate_attribute": 0,
+        "html:html_unclosed_tag": 0,
+        "html:html_unexpected_end_tag": 0,
+        "html:no_likely_error": 0,
+        "javascript:javascript_unclosed_delimiter": 27,
+        "javascript:javascript_unexpected_token": 0,
+        "javascript:javascript_unterminated_string": 0,
+        "javascript:no_likely_error": 12
+      },
+      "javascript:javascript_unexpected_token": {
+        "css:css_missing_colon": 0,
+        "css:css_unclosed_block": 0,
+        "css:css_unterminated_string": 0,
+        "css:no_likely_error": 0,
+        "html:html_duplicate_attribute": 0,
+        "html:html_unclosed_tag": 0,
+        "html:html_unexpected_end_tag": 0,
+        "html:no_likely_error": 0,
+        "javascript:javascript_unclosed_delimiter": 0,
+        "javascript:javascript_unexpected_token": 36,
+        "javascript:javascript_unterminated_string": 0,
+        "javascript:no_likely_error": 0
+      },
+      "javascript:javascript_unterminated_string": {
+        "css:css_missing_colon": 0,
+        "css:css_unclosed_block": 0,
+        "css:css_unterminated_string": 0,
+        "css:no_likely_error": 0,
+        "html:html_duplicate_attribute": 0,
+        "html:html_unclosed_tag": 0,
+        "html:html_unexpected_end_tag": 0,
+        "html:no_likely_error": 0,
+        "javascript:javascript_unclosed_delimiter": 0,
+        "javascript:javascript_unexpected_token": 0,
+        "javascript:javascript_unterminated_string": 27,
+        "javascript:no_likely_error": 12
+      },
+      "javascript:no_likely_error": {
+        "css:css_missing_colon": 0,
+        "css:css_unclosed_block": 0,
+        "css:css_unterminated_string": 0,
+        "css:no_likely_error": 0,
+        "html:html_duplicate_attribute": 0,
+        "html:html_unclosed_tag": 0,
+        "html:html_unexpected_end_tag": 0,
+        "html:no_likely_error": 0,
+        "javascript:javascript_unclosed_delimiter": 0,
+        "javascript:javascript_unexpected_token": 0,
+        "javascript:javascript_unterminated_string": 0,
+        "javascript:no_likely_error": 39
+      }
+    }
+  },
+  "by_language": {
+    "css": {
+      "examples": 153,
+      "accuracy": 0.9542,
+      "macro_precision": 0.9597,
+      "macro_recall": 0.9551,
+      "macro_f1": 0.9555,
+      "per_class": {
+        "css_missing_colon": {
+          "support": 39,
+          "precision": 1.0,
+          "recall": 0.9231,
+          "f1": 0.96
+        },
+        "css_unclosed_block": {
+          "support": 39,
+          "precision": 0.8667,
+          "recall": 1.0,
+          "f1": 0.9286
+        },
+        "css_unterminated_string": {
+          "support": 36,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "no_likely_error": {
+          "support": 39,
+          "precision": 0.9722,
+          "recall": 0.8974,
+          "f1": 0.9333
+        }
+      },
+      "confusion_matrix": {
+        "css_missing_colon": {
+          "css_missing_colon": 36,
+          "css_unclosed_block": 2,
+          "css_unterminated_string": 0,
+          "no_likely_error": 1
+        },
+        "css_unclosed_block": {
+          "css_missing_colon": 0,
+          "css_unclosed_block": 39,
+          "css_unterminated_string": 0,
+          "no_likely_error": 0
+        },
+        "css_unterminated_string": {
+          "css_missing_colon": 0,
+          "css_unclosed_block": 0,
+          "css_unterminated_string": 36,
+          "no_likely_error": 0
+        },
+        "no_likely_error": {
+          "css_missing_colon": 0,
+          "css_unclosed_block": 4,
+          "css_unterminated_string": 0,
+          "no_likely_error": 35
+        }
+      }
+    },
+    "html": {
+      "examples": 153,
+      "accuracy": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "per_class": {
+        "html_duplicate_attribute": {
+          "support": 36,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "html_unclosed_tag": {
+          "support": 39,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "html_unexpected_end_tag": {
+          "support": 39,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "no_likely_error": {
+          "support": 39,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "confusion_matrix": {
+        "html_duplicate_attribute": {
+          "html_duplicate_attribute": 36,
+          "html_unclosed_tag": 0,
+          "html_unexpected_end_tag": 0,
+          "no_likely_error": 0
+        },
+        "html_unclosed_tag": {
+          "html_duplicate_attribute": 0,
+          "html_unclosed_tag": 39,
+          "html_unexpected_end_tag": 0,
+          "no_likely_error": 0
+        },
+        "html_unexpected_end_tag": {
+          "html_duplicate_attribute": 0,
+          "html_unclosed_tag": 0,
+          "html_unexpected_end_tag": 39,
+          "no_likely_error": 0
+        },
+        "no_likely_error": {
+          "html_duplicate_attribute": 0,
+          "html_unclosed_tag": 0,
+          "html_unexpected_end_tag": 0,
+          "no_likely_error": 39
+        }
+      }
+    },
+    "javascript": {
+      "examples": 153,
+      "accuracy": 0.8431,
+      "macro_precision": 0.9047,
+      "macro_recall": 0.8461,
+      "macro_f1": 0.8503,
+      "per_class": {
+        "javascript_unclosed_delimiter": {
+          "support": 39,
+          "precision": 1.0,
+          "recall": 0.6923,
+          "f1": 0.8182
+        },
+        "javascript_unexpected_token": {
+          "support": 36,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "javascript_unterminated_string": {
+          "support": 39,
+          "precision": 1.0,
+          "recall": 0.6923,
+          "f1": 0.8182
+        },
+        "no_likely_error": {
+          "support": 39,
+          "precision": 0.619,
+          "recall": 1.0,
+          "f1": 0.7647
+        }
+      },
+      "confusion_matrix": {
+        "javascript_unclosed_delimiter": {
+          "javascript_unclosed_delimiter": 27,
+          "javascript_unexpected_token": 0,
+          "javascript_unterminated_string": 0,
+          "no_likely_error": 12
+        },
+        "javascript_unexpected_token": {
+          "javascript_unclosed_delimiter": 0,
+          "javascript_unexpected_token": 36,
+          "javascript_unterminated_string": 0,
+          "no_likely_error": 0
+        },
+        "javascript_unterminated_string": {
+          "javascript_unclosed_delimiter": 0,
+          "javascript_unexpected_token": 0,
+          "javascript_unterminated_string": 27,
+          "no_likely_error": 12
+        },
+        "no_likely_error": {
+          "javascript_unclosed_delimiter": 0,
+          "javascript_unexpected_token": 0,
+          "javascript_unterminated_string": 0,
+          "no_likely_error": 39
+        }
+      }
+    }
+  },
+  "by_test_origin": {
+    "grammar_generated_synthetic": {
+      "examples": 432,
+      "accuracy": 0.9306,
+      "macro_precision": 0.9541,
+      "macro_recall": 0.9306,
+      "macro_f1": 0.932,
+      "per_class": {
+        "css:css_missing_colon": {
+          "support": 36,
+          "precision": 1.0,
+          "recall": 0.9167,
+          "f1": 0.9565
+        },
+        "css:css_unclosed_block": {
+          "support": 36,
+          "precision": 0.878,
+          "recall": 1.0,
+          "f1": 0.9351
+        },
+        "css:css_unterminated_string": {
+          "support": 36,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "css:no_likely_error": {
+          "support": 36,
+          "precision": 0.9706,
+          "recall": 0.9167,
+          "f1": 0.9429
+        },
+        "html:html_duplicate_attribute": {
+          "support": 36,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "html:html_unclosed_tag": {
+          "support": 36,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "html:html_unexpected_end_tag": {
+          "support": 36,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "html:no_likely_error": {
+          "support": 36,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "javascript:javascript_unclosed_delimiter": {
+          "support": 36,
+          "precision": 1.0,
+          "recall": 0.6667,
+          "f1": 0.8
+        },
+        "javascript:javascript_unexpected_token": {
+          "support": 36,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "javascript:javascript_unterminated_string": {
+          "support": 36,
+          "precision": 1.0,
+          "recall": 0.6667,
+          "f1": 0.8
+        },
+        "javascript:no_likely_error": {
+          "support": 36,
+          "precision": 0.6,
+          "recall": 1.0,
+          "f1": 0.75
+        }
+      },
+      "confusion_matrix": {
+        "css:css_missing_colon": {
+          "css:css_missing_colon": 33,
+          "css:css_unclosed_block": 2,
+          "css:css_unterminated_string": 0,
+          "css:no_likely_error": 1,
+          "html:html_duplicate_attribute": 0,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unexpected_token": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 0
+        },
+        "css:css_unclosed_block": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 36,
+          "css:css_unterminated_string": 0,
+          "css:no_likely_error": 0,
+          "html:html_duplicate_attribute": 0,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unexpected_token": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 0
+        },
+        "css:css_unterminated_string": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 0,
+          "css:css_unterminated_string": 36,
+          "css:no_likely_error": 0,
+          "html:html_duplicate_attribute": 0,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unexpected_token": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 0
+        },
+        "css:no_likely_error": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 3,
+          "css:css_unterminated_string": 0,
+          "css:no_likely_error": 33,
+          "html:html_duplicate_attribute": 0,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unexpected_token": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 0
+        },
+        "html:html_duplicate_attribute": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 0,
+          "css:css_unterminated_string": 0,
+          "css:no_likely_error": 0,
+          "html:html_duplicate_attribute": 36,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unexpected_token": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 0
+        },
+        "html:html_unclosed_tag": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 0,
+          "css:css_unterminated_string": 0,
+          "css:no_likely_error": 0,
+          "html:html_duplicate_attribute": 0,
+          "html:html_unclosed_tag": 36,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unexpected_token": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 0
+        },
+        "html:html_unexpected_end_tag": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 0,
+          "css:css_unterminated_string": 0,
+          "css:no_likely_error": 0,
+          "html:html_duplicate_attribute": 0,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 36,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unexpected_token": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 0
+        },
+        "html:no_likely_error": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 0,
+          "css:css_unterminated_string": 0,
+          "css:no_likely_error": 0,
+          "html:html_duplicate_attribute": 0,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 36,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unexpected_token": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 0
+        },
+        "javascript:javascript_unclosed_delimiter": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 0,
+          "css:css_unterminated_string": 0,
+          "css:no_likely_error": 0,
+          "html:html_duplicate_attribute": 0,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 24,
+          "javascript:javascript_unexpected_token": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 12
+        },
+        "javascript:javascript_unexpected_token": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 0,
+          "css:css_unterminated_string": 0,
+          "css:no_likely_error": 0,
+          "html:html_duplicate_attribute": 0,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unexpected_token": 36,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 0
+        },
+        "javascript:javascript_unterminated_string": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 0,
+          "css:css_unterminated_string": 0,
+          "css:no_likely_error": 0,
+          "html:html_duplicate_attribute": 0,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unexpected_token": 0,
+          "javascript:javascript_unterminated_string": 24,
+          "javascript:no_likely_error": 12
+        },
+        "javascript:no_likely_error": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 0,
+          "css:css_unterminated_string": 0,
+          "css:no_likely_error": 0,
+          "html:html_duplicate_attribute": 0,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unexpected_token": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 36
+        }
+      }
+    },
+    "hand_authored_synthetic": {
+      "examples": 27,
+      "accuracy": 0.963,
+      "macro_precision": 0.9722,
+      "macro_recall": 0.963,
+      "macro_f1": 0.9619,
+      "per_class": {
+        "css:css_missing_colon": {
+          "support": 3,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "css:css_unclosed_block": {
+          "support": 3,
+          "precision": 0.75,
+          "recall": 1.0,
+          "f1": 0.8571
+        },
+        "css:no_likely_error": {
+          "support": 3,
+          "precision": 1.0,
+          "recall": 0.6667,
+          "f1": 0.8
+        },
+        "html:html_unclosed_tag": {
+          "support": 3,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "html:html_unexpected_end_tag": {
+          "support": 3,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "html:no_likely_error": {
+          "support": 3,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "javascript:javascript_unclosed_delimiter": {
+          "support": 3,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "javascript:javascript_unterminated_string": {
+          "support": 3,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "javascript:no_likely_error": {
+          "support": 3,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "confusion_matrix": {
+        "css:css_missing_colon": {
+          "css:css_missing_colon": 3,
+          "css:css_unclosed_block": 0,
+          "css:no_likely_error": 0,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 0
+        },
+        "css:css_unclosed_block": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 3,
+          "css:no_likely_error": 0,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 0
+        },
+        "css:no_likely_error": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 1,
+          "css:no_likely_error": 2,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 0
+        },
+        "html:html_unclosed_tag": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 0,
+          "css:no_likely_error": 0,
+          "html:html_unclosed_tag": 3,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 0
+        },
+        "html:html_unexpected_end_tag": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 0,
+          "css:no_likely_error": 0,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 3,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 0
+        },
+        "html:no_likely_error": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 0,
+          "css:no_likely_error": 0,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 3,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 0
+        },
+        "javascript:javascript_unclosed_delimiter": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 0,
+          "css:no_likely_error": 0,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 3,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 0
+        },
+        "javascript:javascript_unterminated_string": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 0,
+          "css:no_likely_error": 0,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unterminated_string": 3,
+          "javascript:no_likely_error": 0
+        },
+        "javascript:no_likely_error": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 0,
+          "css:no_likely_error": 0,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 3
+        }
+      }
+    }
+  },
+  "reference_baseline": {
+    "description": "Token-only multinomial Naive Bayes with alpha=1.0, scored on the same test split.",
+    "overall": {
+      "examples": 459,
+      "accuracy": 0.7233,
+      "macro_precision": 0.7461,
+      "macro_recall": 0.7286,
+      "macro_f1": 0.7309,
+      "per_class": {
+        "css:css_missing_colon": {
+          "support": 39,
+          "precision": 0.3889,
+          "recall": 0.359,
+          "f1": 0.3733
+        },
+        "css:css_unclosed_block": {
+          "support": 39,
+          "precision": 0.4048,
+          "recall": 0.4359,
+          "f1": 0.4198
+        },
+        "css:css_unterminated_string": {
+          "support": 36,
+          "precision": 0.973,
+          "recall": 1.0,
+          "f1": 0.9863
+        },
+        "css:no_likely_error": {
+          "support": 39,
+          "precision": 0.3421,
+          "recall": 0.3333,
+          "f1": 0.3377
+        },
+        "html:html_duplicate_attribute": {
+          "support": 36,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "html:html_unclosed_tag": {
+          "support": 39,
+          "precision": 0.907,
+          "recall": 1.0,
+          "f1": 0.9512
+        },
+        "html:html_unexpected_end_tag": {
+          "support": 39,
+          "precision": 0.973,
+          "recall": 0.9231,
+          "f1": 0.9474
+        },
+        "html:no_likely_error": {
+          "support": 39,
+          "precision": 1.0,
+          "recall": 0.9487,
+          "f1": 0.9737
+        },
+        "javascript:javascript_unclosed_delimiter": {
+          "support": 39,
+          "precision": 0.52,
+          "recall": 0.6667,
+          "f1": 0.5843
+        },
+        "javascript:javascript_unexpected_token": {
+          "support": 36,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "javascript:javascript_unterminated_string": {
+          "support": 39,
+          "precision": 1.0,
+          "recall": 0.5641,
+          "f1": 0.7213
+        },
+        "javascript:no_likely_error": {
+          "support": 39,
+          "precision": 0.4444,
+          "recall": 0.5128,
+          "f1": 0.4762
+        }
+      },
+      "confusion_matrix": {
+        "css:css_missing_colon": {
+          "css:css_missing_colon": 14,
+          "css:css_unclosed_block": 12,
+          "css:css_unterminated_string": 0,
+          "css:no_likely_error": 13,
+          "html:html_duplicate_attribute": 0,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unexpected_token": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 0
+        },
+        "css:css_unclosed_block": {
+          "css:css_missing_colon": 10,
+          "css:css_unclosed_block": 17,
+          "css:css_unterminated_string": 0,
+          "css:no_likely_error": 12,
+          "html:html_duplicate_attribute": 0,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unexpected_token": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 0
+        },
+        "css:css_unterminated_string": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 0,
+          "css:css_unterminated_string": 36,
+          "css:no_likely_error": 0,
+          "html:html_duplicate_attribute": 0,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unexpected_token": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 0
+        },
+        "css:no_likely_error": {
+          "css:css_missing_colon": 12,
+          "css:css_unclosed_block": 13,
+          "css:css_unterminated_string": 1,
+          "css:no_likely_error": 13,
+          "html:html_duplicate_attribute": 0,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unexpected_token": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 0
+        },
+        "html:html_duplicate_attribute": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 0,
+          "css:css_unterminated_string": 0,
+          "css:no_likely_error": 0,
+          "html:html_duplicate_attribute": 36,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unexpected_token": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 0
+        },
+        "html:html_unclosed_tag": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 0,
+          "css:css_unterminated_string": 0,
+          "css:no_likely_error": 0,
+          "html:html_duplicate_attribute": 0,
+          "html:html_unclosed_tag": 39,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unexpected_token": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 0
+        },
+        "html:html_unexpected_end_tag": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 0,
+          "css:css_unterminated_string": 0,
+          "css:no_likely_error": 0,
+          "html:html_duplicate_attribute": 0,
+          "html:html_unclosed_tag": 3,
+          "html:html_unexpected_end_tag": 36,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unexpected_token": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 0
+        },
+        "html:no_likely_error": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 0,
+          "css:css_unterminated_string": 0,
+          "css:no_likely_error": 0,
+          "html:html_duplicate_attribute": 0,
+          "html:html_unclosed_tag": 1,
+          "html:html_unexpected_end_tag": 1,
+          "html:no_likely_error": 37,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unexpected_token": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 0
+        },
+        "javascript:javascript_unclosed_delimiter": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 0,
+          "css:css_unterminated_string": 0,
+          "css:no_likely_error": 0,
+          "html:html_duplicate_attribute": 0,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 26,
+          "javascript:javascript_unexpected_token": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 13
+        },
+        "javascript:javascript_unexpected_token": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 0,
+          "css:css_unterminated_string": 0,
+          "css:no_likely_error": 0,
+          "html:html_duplicate_attribute": 0,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 0,
+          "javascript:javascript_unexpected_token": 36,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 0
+        },
+        "javascript:javascript_unterminated_string": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 0,
+          "css:css_unterminated_string": 0,
+          "css:no_likely_error": 0,
+          "html:html_duplicate_attribute": 0,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 5,
+          "javascript:javascript_unexpected_token": 0,
+          "javascript:javascript_unterminated_string": 22,
+          "javascript:no_likely_error": 12
+        },
+        "javascript:no_likely_error": {
+          "css:css_missing_colon": 0,
+          "css:css_unclosed_block": 0,
+          "css:css_unterminated_string": 0,
+          "css:no_likely_error": 0,
+          "html:html_duplicate_attribute": 0,
+          "html:html_unclosed_tag": 0,
+          "html:html_unexpected_end_tag": 0,
+          "html:no_likely_error": 0,
+          "javascript:javascript_unclosed_delimiter": 19,
+          "javascript:javascript_unexpected_token": 0,
+          "javascript:javascript_unterminated_string": 0,
+          "javascript:no_likely_error": 20
+        }
+      }
+    }
+  },
+  "limitations": [
+    "All included examples are synthetic; these metrics do not estimate accuracy on real user code.",
+    "Holding out template families reduces near-duplicate leakage but does not replace an independently collected real-world dataset.",
+    "Naive Bayes confidence scores are not calibrated probabilities."
+  ]
+}
